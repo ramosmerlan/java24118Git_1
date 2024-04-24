@@ -1,0 +1,51 @@
+
+
+
+
+.titulo {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center ;
+    color: #fff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    
+  }
+  
+  .grid-item {
+    position: relative; /* Establece la posición relativa para que la información esté posicionada correctamente */
+    margin: 10px;
+
+}
+  
+  .grid-item img {
+    width: 100%; /* Ajusta el tamaño de la imagen para que ocupe todo el espacio disponible */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    border-radius: 7%;
+}
+  
+  .info {
+    position: absolute;
+    top: 0;
+    left: 1;
+    bottom: -100%;
+    font-size: smaller;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 2%;
+    display: none; /* Oculta la información inicialmente */
+  }
+  
+  .grid-item:hover .info {
+    display: block; /* Muestra la información cuando se pasa el cursor sobre el grid-item */
+  }
+  
+  @media only screen and (max-width: 720px) {
+    .grid-container {
+        grid-template-columns: repeat(2,1fr); /* Cambia el tamaño de las columnas en dispositivos más pequeños */
+    }
+}
